@@ -1,0 +1,695 @@
+$textFont: 'Jost', sans-serif;
+
+.watch-banner-pages-container {
+    width: 100%;
+    height: 400px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    position: relative;
+
+    video {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .watch-banner-pages-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'Jost', sans-serif;
+        color: #fff;
+
+        position: absolute;
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        button {
+            width: 140px;
+            height: 30px;
+            padding: 10px 16px;
+
+            background-color: transparent;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+            border: 1px solid #fff;
+
+            cursor: pointer;
+        }
+
+        button:after {
+            content: "";
+            width: 0%;
+            height: 100%;
+            background: #000;
+            position: absolute;
+            transition: all 0.4s ease-in-out;
+            right: 0;
+        }
+
+        button:hover::after {
+            right: auto;
+            left: 0;
+            width: 100%;
+        }
+
+        button:hover {
+            border: 1px solid #000;
+        }
+
+        button span {
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+
+            color: #FFF;
+            font-size: .7rem;
+            font-weight: bold;
+
+            z-index: 2;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover span {
+            color: #fff;
+            animation: scaleUp 0.3s ease-in-out;
+        }
+    }
+}
+
+.watches-content-container {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: $textFont;
+
+
+    .watches-title {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        margin-bottom: 20px;
+
+        h1 {
+            font-weight: 400;
+
+        }
+
+        p {
+            font-size: .7rem;
+        }
+
+
+    }
+
+    .watches-category {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .category {
+            font-size: .8rem;
+            font-weight: 400;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .category::after {
+            content: "";
+            width: 0;
+            height: 1.5px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            background-color: #FFBF00;
+            transition: width .5s;
+            transform-origin: left;
+        }
+
+        .category:hover::after {
+            width: 100%;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .category-active {
+            box-shadow: inset 0 -2px #FFBF00;
+        }
+    }
+
+    .watches-display-container {
+        width: 100%;
+        padding: 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        button {
+            width: 120px;
+            padding: 7px 16px;
+            margin-top: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: transparent;
+            position: relative;
+
+            overflow: hidden;
+            border: 1px solid #000;
+
+            cursor: pointer;
+        }
+
+        button:after {
+            content: "";
+            width: 0%;
+            height: 100%;
+            background: #000;
+            position: absolute;
+            transition: all 0.4s ease-in-out;
+            right: 0;
+        }
+
+        button:hover::after {
+            right: auto;
+            left: 0;
+            width: 100%;
+        }
+
+        button span {
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+
+            font-size: .7rem;
+
+            z-index: 20;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover span {
+            color: #fff;
+            animation: scaleUp 0.3s ease-in-out;
+        }
+
+        .watches-display-content {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+
+            gap: 60px;
+        }
+    }
+
+    .watches-wide-container {
+        width: 80%;
+        height: 370px;
+        display: flex;
+
+    }
+
+    .watches-wide-banner {
+        width: 50%;
+        height: 370px;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        display: flex;
+
+
+        margin-bottom: 20px;
+    }
+
+    .watches-wide-descbox {
+        width: 50%;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        text-align: center;
+
+        h1 {
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        p {
+            padding: 0 2rem;
+            font-size: .8rem;
+            font-weight: 300;
+        }
+    }
+
+    .watches-small-display {
+        width: 230px;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        background-color: #F9F9F9;
+
+
+        .watches-small-imagebox {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: transform .2s;
+                cursor: pointer;
+            }
+
+            img:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        .watches-small-textbox {
+            width: 100%;
+            height: 30%;
+
+            background-color: #fff;
+
+            display: flex;
+            flex-direction: column;
+
+
+            .watches-name-heart {
+                width: 100%;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+
+                i {
+                    cursor: pointer;
+                    margin-top: 10px;
+                    margin-right: 10px;
+                }
+
+
+            }
+
+
+            h2 {
+                font-size: 1rem;
+                font-weight: 400;
+                margin: 10px 0 0 1rem;
+
+            }
+
+            h3 {
+                font-size: .7rem;
+                font-weight: 400;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+    .watch-overlay-container {
+        width: 70%;
+        height: 300px;
+
+        display: flex;
+        background-color: #fff;
+
+        position: fixed;
+        top: 100px;
+        z-index: 4;
+
+        .watch-overlay-imagebox {
+
+            display: flex;
+        }
+
+        .watch-overlay-textbox {
+            width: 57%;
+            margin: 1rem 3%;
+
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                font-size: 1.5rem;
+
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                font-weight: 400;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+
+            h4 {
+                font-size: .7rem;
+                font-weight: 300;
+            }
+
+            p {
+                font-size: .7rem;
+            }
+
+            button {
+                width: 120px;
+                padding: 7px 16px;
+                margin-top: 20px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                background: transparent;
+                position: relative;
+
+                overflow: hidden;
+                border: 1px solid #000;
+
+                cursor: pointer;
+            }
+
+            button:after {
+                content: "";
+                width: 0%;
+                height: 100%;
+                background: #000;
+                position: absolute;
+                transition: all 0.4s ease-in-out;
+                right: 0;
+            }
+
+            button:hover::after {
+                right: auto;
+                left: 0;
+                width: 100%;
+            }
+
+            button span {
+                text-align: center;
+                text-decoration: none;
+                width: 100%;
+
+                font-size: .7rem;
+
+                z-index: 20;
+                transition: all 0.3s ease-in-out;
+            }
+
+            button:hover span {
+                color: #fff;
+                animation: scaleUp 0.3s ease-in-out;
+            }
+        }
+    }
+
+    .watch-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        z-index: 3;
+    }
+}
+
+// Limited
+.watches-limited-container {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .watches-limited-banner {
+        width: 80%;
+        height: 370px;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin-bottom: 20px;
+    }
+
+    .limited-title {
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .watches-content-container {
+        .watches-display-container {
+            .watches-display-content {
+                .watches-wide-container {
+
+                    height: auto;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .watches-wide-banner {
+                        width: 100%;
+                        height: 400px;
+                    }
+
+                    .watches-wide-descbox {
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+
+        .watches-limited-container {
+            .watches-wide-container {
+
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .watches-limited-banner {
+                    width: 100%;
+                    height: 400px;
+                }
+
+                .watches-wide-descbox {
+                    width: 100%;
+                }
+            }
+        }
+
+        .watch-overlay-container {
+            width: 80%;
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+
+            top: 100px;
+
+
+            .watch-overlay-imagebox {
+                width: 50%;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                }
+            }
+
+            .watch-overlay-textbox {
+                width: 80%;
+                margin: 0 0 0 1rem;
+
+                button {
+                    margin: 10px 0;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .boutique-banner-pages-container {
+        .boutique-banner-pages-content {
+            text-align: center;
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .watch-banner-pages-container {
+        .watch-banner-pages-content {
+            text-align: center;
+    
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .watches-content-container {
+        .watch-overlay-container {
+            .watch-overlay-imagebox {
+                width: 65%;
+            }
+
+            .watch-overlay-textbox {
+                width: 80%;
+                margin: 0;
+
+
+                h1 {
+                    font-size: 1.3rem;
+
+                }
+
+                h2 {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+
+                h3 {
+                    font-size: 1.1rem;
+                    font-weight: 300;
+                }
+
+                h4 {
+                    font-size: .7rem;
+                    font-weight: 300;
+                }
+
+                p {
+                    font-size: .6rem;
+                }
+
+                button {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .watches-content-container {
+        .watches-display-container {
+            .watches-display-content {
+                .watches-wide-container {
+
+                    height: auto;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .watches-wide-banner {
+                        width: 100%;
+                        height: 400px;
+                    }
+
+                    .watches-wide-descbox {
+                        width: 100%;
+                        height: 200px;
+                    }
+                }
+            }
+
+        }
+
+        .watches-limited-container {
+            .watches-wide-container {
+
+                height: auto;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .watches-limited-banner {
+                    width: 100%;
+                    height: 400px;
+                }
+
+                .watches-wide-descbox {
+                    width: 100%;
+                    height: auto;
+
+                    p {
+                        font-size: .7rem;
+                    }
+                }
+            }
+        }
+
+    }
+}

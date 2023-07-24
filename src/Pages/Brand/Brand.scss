@@ -1,0 +1,209 @@
+.brand-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Jost', sans-serif;
+
+    .brand-quote {
+        padding: 2rem 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Arapey';
+        font-weight: 100;
+        font-style: italic;
+
+
+        h1 {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+    }
+
+    .brand-about-content {
+        width: 100%;
+        padding: 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .brand-about-imagebox {
+            width: 40%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .brand-about-textbox {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+
+
+            h2 {
+                font-size: 1.3rem;
+                margin: 0 0 12px 5%;
+            }
+
+            h3 {
+                font-size: .8rem;
+                font-weight: 400;
+                line-height: 1.5;
+                margin-left: 5%;
+            }
+
+            span {
+                width: max-content;
+                font-size: .8rem;
+                margin: 10px 0 0 5%;
+                position: relative;
+                cursor: pointer;
+            }
+
+            span::after {
+                content: "";
+                width: 0;
+                height: 1.5px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                background-color: #010B13;
+                transition: width .5s;
+                transform-origin: left;
+            }
+
+            span:hover::after {
+                width: 100%;
+            }
+        }
+    }
+
+    .brand-history-content {
+        width: 100%;
+        padding: 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .brand-history-textbox {
+            width: 40%;
+
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                font-size: 1.3rem;
+                margin: 0 5% 12px 0;
+
+            }
+
+            h3 {
+                font-size: .8rem;
+                font-weight: 400;
+                line-height: 1.5;
+                margin-right: 5%;
+            }
+
+            span {
+                width: max-content;
+                font-size: .8rem;
+                margin: 10px 0 0 0;
+                position: relative;
+                cursor: pointer;
+            }
+
+            span::after {
+                content: "";
+                width: 0;
+                height: 1.5px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                background-color: #010B13;
+                transition: width .5s;
+                transform-origin: left;
+            }
+
+            span:hover::after {
+                width: 100%;
+            }
+        }
+
+        .brand-history-imagebox {
+            width: 40%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .brand-content-container {
+        .brand-about-content {
+            flex-direction: column;
+            padding-bottom: 1rem;
+
+            .brand-about-imagebox {
+                width: 80%;
+            }
+
+            .brand-about-textbox {
+                width: 80%;
+
+                h2 {
+                    margin-top: 10px;
+                }
+
+                span,
+                h3,
+                h2 {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .brand-history-content {
+            flex-direction: column;
+            padding-bottom: 1rem;
+
+            .brand-history-textbox {
+                width: 80%;
+                order: 2;
+
+                h2 {
+                    margin-top: 10px;
+                }
+
+                span,
+                h3,
+                h2 {
+                    margin-left: 0;
+                }
+
+            }
+
+            .brand-history-imagebox {
+                width: 80%;
+                order: 1;
+            }
+        }
+    }
+
+}

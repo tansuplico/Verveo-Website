@@ -1,0 +1,168 @@
+.brand-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+}
+.brand-content-container .brand-quote {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arapey";
+  font-weight: 100;
+  font-style: italic;
+}
+.brand-content-container .brand-quote h1 {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.brand-content-container .brand-about-content {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-content-container .brand-about-content .brand-about-imagebox {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-content-container .brand-about-content .brand-about-imagebox img {
+  width: 100%;
+}
+.brand-content-container .brand-about-content .brand-about-textbox {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.brand-content-container .brand-about-content .brand-about-textbox h2 {
+  font-size: 1.3rem;
+  margin: 0 0 12px 5%;
+}
+.brand-content-container .brand-about-content .brand-about-textbox h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-left: 5%;
+}
+.brand-content-container .brand-about-content .brand-about-textbox span {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 0.8rem;
+  margin: 10px 0 0 5%;
+  position: relative;
+  cursor: pointer;
+}
+.brand-content-container .brand-about-content .brand-about-textbox span::after {
+  content: "";
+  width: 0;
+  height: 1.5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #010B13;
+  transition: width 0.5s;
+  transform-origin: left;
+}
+.brand-content-container .brand-about-content .brand-about-textbox span:hover::after {
+  width: 100%;
+}
+.brand-content-container .brand-history-content {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-content-container .brand-history-content .brand-history-textbox {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.brand-content-container .brand-history-content .brand-history-textbox h2 {
+  font-size: 1.3rem;
+  margin: 0 5% 12px 0;
+}
+.brand-content-container .brand-history-content .brand-history-textbox h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-right: 5%;
+}
+.brand-content-container .brand-history-content .brand-history-textbox span {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 0.8rem;
+  margin: 10px 0 0 0;
+  position: relative;
+  cursor: pointer;
+}
+.brand-content-container .brand-history-content .brand-history-textbox span::after {
+  content: "";
+  width: 0;
+  height: 1.5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #010B13;
+  transition: width 0.5s;
+  transform-origin: left;
+}
+.brand-content-container .brand-history-content .brand-history-textbox span:hover::after {
+  width: 100%;
+}
+.brand-content-container .brand-history-content .brand-history-imagebox {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.brand-content-container .brand-history-content .brand-history-imagebox img {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .brand-content-container .brand-about-content {
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .brand-content-container .brand-about-content .brand-about-imagebox {
+    width: 80%;
+  }
+  .brand-content-container .brand-about-content .brand-about-textbox {
+    width: 80%;
+  }
+  .brand-content-container .brand-about-content .brand-about-textbox h2 {
+    margin-top: 10px;
+  }
+  .brand-content-container .brand-about-content .brand-about-textbox span,
+  .brand-content-container .brand-about-content .brand-about-textbox h3,
+  .brand-content-container .brand-about-content .brand-about-textbox h2 {
+    margin-left: 0;
+  }
+  .brand-content-container .brand-history-content {
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .brand-content-container .brand-history-content .brand-history-textbox {
+    width: 80%;
+    order: 2;
+  }
+  .brand-content-container .brand-history-content .brand-history-textbox h2 {
+    margin-top: 10px;
+  }
+  .brand-content-container .brand-history-content .brand-history-textbox span,
+  .brand-content-container .brand-history-content .brand-history-textbox h3,
+  .brand-content-container .brand-history-content .brand-history-textbox h2 {
+    margin-left: 0;
+  }
+  .brand-content-container .brand-history-content .brand-history-imagebox {
+    width: 80%;
+    order: 1;
+  }
+}/*# sourceMappingURL=Brand.css.map */

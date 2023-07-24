@@ -1,0 +1,93 @@
+footer {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0 1rem 0;
+  font-family: "Jost", sans-serif;
+  background-color: #010b13;
+  position: relative;
+  color: #fff;
+}
+footer .footer-contents {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+footer .footer-contents .footer-column {
+  width: 20%;
+}
+footer .footer-contents .footer-column h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 10px 1rem;
+}
+footer .footer-contents .footer-column h3 img {
+  display: none;
+}
+footer .footer-contents .footer-column ul {
+  list-style: none;
+  padding: 0 1rem;
+  font-weight: 300;
+}
+footer .footer-contents .footer-column ul li {
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  cursor: pointer;
+}
+footer .footer-contents .footer-column ul li::after {
+  content: "";
+  width: 0;
+  height: 1.5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.5s;
+  transform-origin: left;
+}
+footer .footer-contents .footer-column ul li:hover::after {
+  width: 100%;
+}
+footer span {
+  font-size: 0.4rem;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  footer .footer-contents {
+    gap: 0;
+    flex-direction: column;
+  }
+  footer .footer-contents .footer-column {
+    width: 100%;
+  }
+  footer .footer-contents .footer-column h3 {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .footer-contents .footer-column h3 img {
+    display: block;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+  }
+  footer .footer-contents .footer-column ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+  }
+  footer .footer-contents .footer-column ul.activeFooter {
+    max-height: 500px;
+  }
+}/*# sourceMappingURL=Footer.css.map */

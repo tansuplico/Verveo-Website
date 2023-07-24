@@ -1,0 +1,290 @@
+.boutique-banner-pages-container {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    position: relative;
+
+    .boutique-banner-pages-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        font-family: 'Jost', sans-serif;
+        color: #FFF;
+
+        position: absolute;
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        button {
+            width: 140px;
+            height: 30px;
+            padding: 10px 16px;
+
+            background-color: transparent;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+            border: 1px solid #FFF;
+
+            cursor: pointer;
+        }
+
+        button:after {
+            content: "";
+            width: 0%;
+            height: 100%;
+            background: #FFBF00;
+            position: absolute;
+            transition: all 0.4s ease-in-out;
+            right: 0;
+        }
+
+        button:hover::after {
+            right: auto;
+            left: 0;
+            width: 100%;
+        }
+
+        button:hover {
+            border: 1px solid #FFBF00;
+        }
+
+        button span {
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+
+            color: #FFF;
+            font-size: .7rem;
+            font-weight: bold;
+
+            z-index: 2;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button:hover span {
+            color: #000;
+            animation: scaleUp 0.3s ease-in-out;
+        }
+
+    }
+}
+
+.boutique-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Jost', sans-serif;
+
+    background-color: #111111;
+    color: #fff;
+
+    .boutique-title {
+        width: 70%;
+        padding: 2rem 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            font-size: 2rem;
+            color: #FFBF00;
+        }
+
+        p {
+            font-size: .8rem;
+
+        }
+
+
+    }
+
+    .boutique-content {
+        width: 100%;
+        padding: 2rem 0;
+
+        display: flex;
+        flex-direction: column;
+
+        .boutique-location-content {
+            width: 100%;
+            padding: 0 0 2rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .boutique-imagebox {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    cursor: pointer;
+                }
+            }
+
+            .boutique-textbox {
+                width: 40%;
+
+                display: flex;
+                flex-direction: column;
+                color: #FFBF00;
+
+                h1 {
+                    font-size: 1.5rem;
+                    margin-left: 5%;
+                }
+
+                h3 {
+                    font-size: .7rem;
+                    margin: 5px 0 5px 5%;
+
+                }
+
+                p {
+                    color: #fff;
+                    font-size: .8rem;
+                    margin-left: 5%;
+                }
+
+                a {
+                    text-decoration: none;
+
+                }
+
+                button {
+                    width: 120px;
+                    padding: 7px 16px;
+                    margin: 20px 0 0 5%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    background: transparent;
+                    position: relative;
+
+                    overflow: hidden;
+                    border: 1px solid #FFBF00;
+
+                    cursor: pointer;
+                }
+
+                button:after {
+                    content: "";
+                    width: 0%;
+                    height: 100%;
+                    background: #FFBF00;
+                    position: absolute;
+                    transition: all 0.4s ease-in-out;
+                    right: 0;
+                }
+
+                button:hover::after {
+                    right: auto;
+                    left: 0;
+                    width: 100%;
+                }
+
+                button span {
+                    text-align: center;
+                    text-decoration: none;
+                    width: 100%;
+
+                    color: #fff;
+                    font-size: .7rem;
+                    font-weight: bold;
+
+                    z-index: 4;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                button:hover span {
+                    color: #000;
+                    animation: scaleUp 0.3s ease-in-out;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .boutique-container {
+        .boutique-content {
+            width: 100%;
+            padding: 2rem 0;
+
+            display: flex;
+            flex-direction: column;
+
+            .boutique-location-content {
+                flex-direction: column;
+
+                .boutique-imagebox {
+                    width: 80%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .boutique-textbox {
+                    width: 80%;
+
+                    display: flex;
+                    flex-direction: column;
+                    color: #FFBF00;
+
+                    h1,
+                    h3,
+                    p,
+                    button {
+                        margin-left: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .boutique-banner-pages-container {
+        .boutique-banner-pages-content {
+            text-align: center;
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+    }
+}

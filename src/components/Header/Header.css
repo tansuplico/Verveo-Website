@@ -1,0 +1,477 @@
+header {
+  font-family: "Jost", sans-serif;
+  width: 100%;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+header nav {
+  padding: 7px 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav img {
+  width: 130px;
+  height: 40px;
+}
+header nav .menu-bar {
+  display: none;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+header nav ul li {
+  cursor: pointer;
+  position: relative;
+  font-size: 0.8rem;
+}
+header nav .no-underline {
+  color: #000;
+  text-decoration: none;
+}
+header nav ul li::after {
+  content: "";
+  width: 0;
+  height: 1.5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #010B13;
+  transition: width 0.5s;
+  transform-origin: left;
+}
+header nav ul li:hover::after {
+  width: 100%;
+}
+header .header-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+header .header-icon-container img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+header .header-icon-container .favorite-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header .header-icon-container .favorite-box p {
+  background-color: red;
+  font-size: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: 15px;
+  top: 0;
+}
+header .header-icon-container .basket-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+header .header-icon-container .basket-box p {
+  background-color: red;
+  font-size: 0.4rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: 15px;
+  top: 0;
+}
+
+.shopping-cart-drawer {
+  font-family: "Jost", sans-serif;
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 59px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 5;
+}
+.shopping-cart-drawer .shopping-cart-title h1 {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.shopping-cart-drawer .shopping-cart-items-container {
+  width: 90%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item h3 {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-imagebox {
+  width: 30%;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-imagebox img {
+  width: 100%;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-textbox {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-textbox h1 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-textbox h3 {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-textbox span {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 0.7rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-textbox span:hover {
+  text-decoration: underline;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-textbox .cart-item-quantity {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-textbox .cart-item-quantity .decrement {
+  cursor: pointer;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-textbox .cart-item-quantity .increment {
+  cursor: pointer;
+}
+.shopping-cart-drawer .shopping-cart-items-container .cart-item .cart-item-textbox .cart-item-quantity p {
+  font-size: 0.7rem;
+}
+.shopping-cart-drawer .shopping-cart-items-container::-webkit-scrollbar {
+  display: none;
+}
+.shopping-cart-drawer .shopping-cart-payment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.shopping-cart-drawer .shopping-cart-payment h3 {
+  width: 90%;
+  margin-left: 10%;
+  font-weight: 400;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.favorites-drawer {
+  font-family: "Jost", sans-serif;
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 59px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 5;
+}
+.favorites-drawer .favorites-title h1 {
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.favorites-drawer .favorites-items-container {
+  width: 90%;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.favorites-drawer .favorites-items-container::-webkit-scrollbar {
+  display: none;
+}
+.favorites-drawer .favorite-item {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.favorites-drawer .favorite-item h3 {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.favorites-drawer .favorite-item .favorite-item-imagebox {
+  width: 30%;
+}
+.favorites-drawer .favorite-item .favorite-item-imagebox img {
+  width: 100%;
+}
+.favorites-drawer .favorite-item .favorite-item-textbox {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.favorites-drawer .favorite-item .favorite-item-textbox h1 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.favorites-drawer .favorite-item .favorite-item-textbox h3 {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.favorites-drawer .favorite-item .favorite-item-textbox span {
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 0.7rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.favorites-drawer .favorite-item .favorite-item-textbox span:hover {
+  text-decoration: underline;
+}
+
+.profile-drawer {
+  font-family: "Jost", sans-serif;
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 59px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 5;
+}
+.profile-drawer form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.profile-drawer form h3 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.profile-drawer form input {
+  padding: 5px;
+}
+.profile-drawer .profile-content-box {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-drawer .profile-content-box img {
+  width: 20%;
+  height: 50px;
+}
+.profile-drawer .profile-content-box h1 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.profile-drawer .profile-content-box span {
+  margin-top: 10px;
+  cursor: pointer;
+}
+.profile-drawer .profile-content-box span:hover {
+  text-decoration: underline;
+}
+.profile-drawer h1 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.header-btn {
+  width: 120px;
+  padding: 7px 16px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.header-btn:after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: #111111;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.header-btn:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.header-btn span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  color: #000;
+  font-size: 0.7rem;
+  z-index: 4;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-btn:hover span {
+  color: #fff;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+.exit-container {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+}
+.exit-container .exit-drawer {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-drawer {
+  font-family: "Jost", sans-serif;
+  width: 200px;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 59px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  z-index: 5;
+}
+.menu-drawer ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.menu-drawer ul a {
+  color: #000;
+  text-decoration: none;
+}
+.menu-drawer ul li {
+  margin: 0 0 10px 20px;
+  cursor: pointer;
+}
+.menu-drawer ul li:first-child {
+  margin-top: 20px;
+}
+.menu-drawer hr {
+  width: 100%;
+  border: 2px solid #f9f9f9;
+}
+.menu-drawer .menu-icon-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.menu-drawer .menu-icon-box h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px 20px;
+}
+.menu-drawer .menu-icon-box h3:first-child {
+  margin-top: 10px;
+}
+.menu-drawer .menu-icon-box img {
+  width: 20px;
+  height: 20px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  header nav .menu-bar {
+    display: block;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav .header-icon-container .favorite-box {
+    display: none;
+  }
+  header nav .header-icon-container .favorite-box img {
+    display: none;
+  }
+  header nav .header-icon-container .header-profile-icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 320px) {
+  .shopping-cart-drawer {
+    width: 100%;
+  }
+  .favorites-drawer {
+    width: 100%;
+  }
+  .profile-drawer {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Header.css.map */

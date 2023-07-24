@@ -1,0 +1,223 @@
+.boutique-banner-pages-container {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.boutique-banner-pages-container .boutique-banner-pages-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+  color: #FFF;
+  position: absolute;
+}
+.boutique-banner-pages-container .boutique-banner-pages-content h1 {
+  font-size: 5rem;
+}
+.boutique-banner-pages-container .boutique-banner-pages-content button {
+  width: 140px;
+  height: 30px;
+  padding: 10px 16px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #FFF;
+  cursor: pointer;
+}
+.boutique-banner-pages-container .boutique-banner-pages-content button:after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: #FFBF00;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+.boutique-banner-pages-container .boutique-banner-pages-content button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+.boutique-banner-pages-container .boutique-banner-pages-content button:hover {
+  border: 1px solid #FFBF00;
+}
+.boutique-banner-pages-container .boutique-banner-pages-content button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  color: #FFF;
+  font-size: 0.7rem;
+  font-weight: bold;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+.boutique-banner-pages-container .boutique-banner-pages-content button:hover span {
+  color: #000;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+.boutique-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jost", sans-serif;
+  background-color: #111111;
+  color: #fff;
+}
+.boutique-container .boutique-title {
+  width: 70%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.boutique-container .boutique-title h1 {
+  font-size: 2rem;
+  color: #FFBF00;
+}
+.boutique-container .boutique-title p {
+  font-size: 0.8rem;
+}
+.boutique-container .boutique-content {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.boutique-container .boutique-content .boutique-location-content {
+  width: 100%;
+  padding: 0 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-imagebox {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-imagebox img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-textbox {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  color: #FFBF00;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-textbox h1 {
+  font-size: 1.5rem;
+  margin-left: 5%;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-textbox h3 {
+  font-size: 0.7rem;
+  margin: 5px 0 5px 5%;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-textbox p {
+  color: #fff;
+  font-size: 0.8rem;
+  margin-left: 5%;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-textbox a {
+  text-decoration: none;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-textbox button {
+  width: 120px;
+  padding: 7px 16px;
+  margin: 20px 0 0 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #FFBF00;
+  cursor: pointer;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-textbox button:after {
+  content: "";
+  width: 0%;
+  height: 100%;
+  background: #FFBF00;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-textbox button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-textbox button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  z-index: 4;
+  transition: all 0.3s ease-in-out;
+}
+.boutique-container .boutique-content .boutique-location-content .boutique-textbox button:hover span {
+  color: #000;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .boutique-container .boutique-content {
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .boutique-container .boutique-content .boutique-location-content {
+    flex-direction: column;
+  }
+  .boutique-container .boutique-content .boutique-location-content .boutique-imagebox {
+    width: 80%;
+  }
+  .boutique-container .boutique-content .boutique-location-content .boutique-imagebox img {
+    width: 100%;
+    height: 100%;
+  }
+  .boutique-container .boutique-content .boutique-location-content .boutique-textbox {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    color: #FFBF00;
+  }
+  .boutique-container .boutique-content .boutique-location-content .boutique-textbox h1,
+  .boutique-container .boutique-content .boutique-location-content .boutique-textbox h3,
+  .boutique-container .boutique-content .boutique-location-content .boutique-textbox p,
+  .boutique-container .boutique-content .boutique-location-content .boutique-textbox button {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .boutique-banner-pages-container .boutique-banner-pages-content {
+    text-align: center;
+  }
+  .boutique-banner-pages-container .boutique-banner-pages-content h1 {
+    font-size: 3rem;
+  }
+}/*# sourceMappingURL=Boutiques.css.map */
